@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cw5ae4c756614"]
+
+[ext_resource type="Texture2D" uid="uid://fnggxu07tux0" path="res://assests/mainmenu.png" id="1_o5qli"]
+
+[node name="Node2D" type="Node2D" unique_id=225686361]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=783271706]
+format = 2
+
+[node name="mainmenu" type="Sprite2D" parent="." unique_id=370104258]
+position = Vector2(574, 324)
+scale = Vector2(0.74152, 0.7555168)
+texture = ExtResource("1_o5qli")
+
+[node name="Button" type="Button" parent="mainmenu" unique_id=126157928]
+offset_left = -643.2733
+offset_top = 137.65408
+offset_right = -494.9293
+offset_bottom = 201.18672
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="mainmenu" unique_id=887606895]
+offset_left = -701.2623
+offset_top = 218.39354
+offset_right = -436.9404
+offset_bottom = 303.10376
+
+[node name="Button3" type="Button" parent="mainmenu" unique_id=1755616128]
+offset_left = -670.24493
+offset_top = 313.69254
+offset_right = -478.7464
+offset_bottom = 379.8724
