@@ -1,11 +1,20 @@
 [gd_scene format=3 uid="uid://bbe5n6ftfoivy"]
 
+[ext_resource type="Script" uid="uid://bp140ofaud70g" path="res://scripts/astronaut.gd" id="1_v06w7"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bcbt0"]
 
-[node name="Node2D" type="Node2D" unique_id=1936728914]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1541800611]
+script = ExtResource("1_v06w7")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=539043991]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=565075895]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2051744770]
+position = Vector2(0, 38)
 shape = SubResource("CapsuleShape2D_bcbt0")
-debug_color = Color(1, 0.6, 0.69803923, 0.41960785)
+debug_color = Color(0.9764706, 0.6, 0.69803923, 0.41960785)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=774278273]
+offset_left = -3.0
+offset_top = -14.0
+offset_right = 5.0
+offset_bottom = 14.0
+color = Color(1, 0.8, 0.972549, 1)

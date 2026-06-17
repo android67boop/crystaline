@@ -1,3 +1,12 @@
 [gd_scene format=3 uid="uid://cb34jtijachaw"]
 
+[ext_resource type="Script" uid="uid://cyh5rjtrr1k1b" path="res://scripts/gem.gd" id="1_5cxma"]
+[ext_resource type="Texture2D" uid="uid://xibwp5n8wvh6" path="res://assests/assests/sprites/coin.png" id="2_mpwtx"]
+
 [node name="Node2D" type="Node2D" unique_id=2125995391]
+script = ExtResource("1_5cxma")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1694379951]
+texture = ExtResource("2_mpwtx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=987454224]
