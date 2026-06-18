@@ -8,7 +8,6 @@
 script = ExtResource("1_v06w7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2051744770]
-position = Vector2(0, 38)
 shape = SubResource("CapsuleShape2D_bcbt0")
 debug_color = Color(0.9764706, 0.6, 0.69803923, 0.41960785)
 
