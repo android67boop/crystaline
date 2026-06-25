@@ -1,19 +1,140 @@
 [gd_scene format=3 uid="uid://bbe5n6ftfoivy"]
 
 [ext_resource type="Script" uid="uid://bp140ofaud70g" path="res://scripts/astronaut.gd" id="1_v06w7"]
+[ext_resource type="Texture2D" uid="uid://l5aretpbcy5c" path="res://assests/assests/sprites/knight.png" id="2_dmfei"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bcbt0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmfei"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lk35g"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a75ng"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr1oy"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2evn4"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75ag2"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a04db"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_un8ls"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtxhy"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jphm0"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_walvu"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xd4g8"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xd4m"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfly3"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bthpj"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(192, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1abi"]
+atlas = ExtResource("2_dmfei")
+region = Rect2(224, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i7334"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmfei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lk35g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a75ng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr1oy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2evn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75ag2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a04db")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_un8ls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtxhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jphm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_walvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xd4g8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xd4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfly3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bthpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1abi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dmfei"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1541800611]
 script = ExtResource("1_v06w7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2051744770]
-shape = SubResource("CapsuleShape2D_bcbt0")
-debug_color = Color(0.9764706, 0.6, 0.69803923, 0.41960785)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1536997353]
+sprite_frames = SubResource("SpriteFrames_i7334")
+frame_progress = 0.07196896
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=774278273]
-offset_left = -3.0
-offset_top = -14.0
-offset_right = 5.0
-offset_bottom = 14.0
-color = Color(1, 0.8, 0.972549, 1)
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1054378280]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2034949765]
+position = Vector2(-1, 4)
+shape = SubResource("CircleShape2D_dmfei")
+debug_color = Color(1, 0.6, 0.69803923, 0.41960785)

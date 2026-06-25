@@ -23,7 +23,7 @@ func _quit() -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().call_deferred("change_scene_to_file", "res://scenes/astronaut.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://scenes/planet1.tscn")
 	
 	
 
