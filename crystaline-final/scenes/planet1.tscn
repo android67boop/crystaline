@@ -194,4 +194,4 @@ zoom = Vector2(4, 4)
 limit_enabled = false
 
 [node name="CharacterBody2D2" parent="." unique_id=956660731 instance=ExtResource("4_chng0")]
-position = Vector2(218, -135)
+position = Vector2(187, -108)

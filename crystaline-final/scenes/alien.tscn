@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cfrwpjvdmfnje"]
 
 [ext_resource type="Texture2D" uid="uid://cvkfy4iuqfem5" path="res://assests/assests/sprites/slime_purple.png" id="1_h100l"]
+[ext_resource type="Script" uid="uid://bv8hgcgrpx2ts" path="res://scripts/alien.gd" id="1_u8rjw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8rjw"]
 atlas = ExtResource("1_h100l")
@@ -362,6 +363,14 @@ region = Rect2(72, 45, 12, 9)
 atlas = ExtResource("1_h100l")
 region = Rect2(84, 45, 12, 9)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5q1f"]
+atlas = ExtResource("1_h100l")
+region = Rect2(72, 18, 24, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vikga"]
+atlas = ExtResource("1_h100l")
+region = Rect2(72, 0, 24, 18)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_buxln"]
 animations = [{
 "frames": [{
@@ -634,6 +643,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tcp0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5q1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vikga")
 }],
 "loop": true,
 "name": &"default",
@@ -643,10 +658,11 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_561s0"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=956660731]
+script = ExtResource("1_u8rjw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1467789681]
 sprite_frames = SubResource("SpriteFrames_buxln")
-frame_progress = 0.75855786
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2001752720]
 shape = SubResource("CircleShape2D_561s0")
