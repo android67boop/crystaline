@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cvkfy4iuqfem5" path="res://assests/assests/sprites/slime_purple.png" id="1_h100l"]
 [ext_resource type="Script" uid="uid://bv8hgcgrpx2ts" path="res://scripts/alien.gd" id="1_u8rjw"]
+[ext_resource type="Texture2D" uid="uid://dvcrnnqmcg8ov" path="res://assests/alien.png" id="3_3vbw7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8rjw"]
 atlas = ExtResource("1_h100l")
@@ -670,3 +671,8 @@ shape = SubResource("CircleShape2D_561s0")
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1803195578]
 
 [node name="RayCast2D2" type="RayCast2D" parent="." unique_id=1544498889]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1400661486]
+position = Vector2(-3, 0)
+scale = Vector2(0.4278607, 0.481717)
+texture = ExtResource("3_3vbw7")
