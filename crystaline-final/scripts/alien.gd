@@ -1,16 +1,19 @@
 extends CharacterBody2D
 
-var speed = 60
-var direction = 1
+@export var speed: float = 200.0
+@export var player: Node2D
 
-func _physics_process(delta):
-	
-	if !$RayCast2D.is_colliding() or !$RayCast2D2.is_colliding():
-		direction *= -1
+func _physics_process(delta: float) -> void:
+	if player:
+		var relative_position = (player.global_position.x - global_position.x)
+		var direction: int
 		
-
-
-	velocity.x = speed * direction
-	
-	
-	move_and_slide()
+		if relative_position < 0:
+			direction = -1
+		else:
+			direction = 1
+		
+		velocity.x = direction * speed
+		
+		
+		move_and_slide()

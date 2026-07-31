@@ -3,19 +3,31 @@
 [ext_resource type="Script" uid="uid://bp140ofaud70g" path="res://scripts/astronaut.gd" id="1_v06w7"]
 [ext_resource type="Texture2D" uid="uid://dw7g1bcttb4dq" path="res://assests/astronaut.png" id="2_dmfei"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dmfei"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dmfei"]
+radius = 78.0
+height = 252.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lk35g"]
+radius = 60.0
+height = 268.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1541800611]
 script = ExtResource("1_v06w7")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1054378280]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2034949765]
-position = Vector2(-1, 4)
-shape = SubResource("CircleShape2D_dmfei")
-debug_color = Color(1, 0.6, 0.69803923, 0.41960785)
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=798882951]
-position = Vector2(3, 0.18749475)
+position = Vector2(1.0000001, 1)
 scale = Vector2(0.35253906, 0.3656006)
 texture = ExtResource("2_dmfei")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2034949765]
+position = Vector2(-6, -1)
+shape = SubResource("CapsuleShape2D_dmfei")
+debug_color = Color(1, 0.6, 0.69803923, 0.41960785)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=969191569]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=904991930]
+position = Vector2(-8, -9)
+shape = SubResource("CapsuleShape2D_lk35g")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://d2ph5v8hfj3x0" path="res://assests/Screenshot 2026-07-24 at 10.24.15 AM.png" id="2_3mkt7"]
 [ext_resource type="PackedScene" uid="uid://bbe5n6ftfoivy" path="res://scenes/astronaut.tscn" id="2_rghbl"]
 [ext_resource type="PackedScene" uid="uid://cfrwpjvdmfnje" path="res://scenes/alien.tscn" id="4_chng0"]
+[ext_resource type="PackedScene" uid="uid://cb34jtijachaw" path="res://scenes/gem.tscn" id="5_hklh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mkt7"]
-size = Vector2(1174.125, 20)
+size = Vector2(1300, 20)
 
 [node name="Node2D" type="Node2D" unique_id=414470956]
 script = ExtResource("1_c3u4w")
@@ -14,20 +15,27 @@ script = ExtResource("1_c3u4w")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=31706781]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1400306566]
-position = Vector2(-1.0625, 284)
+z_index = 1
+position = Vector2(3, 284)
 shape = SubResource("RectangleShape2D_3mkt7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1383990834]
 texture_filter = 1
-position = Vector2(-1, -2)
+position = Vector2(-0.9999962, 5)
+scale = Vector2(1.1102693, 1)
 texture = ExtResource("2_3mkt7")
 
 [node name="CharacterBody2D" parent="." unique_id=1541800611 instance=ExtResource("2_rghbl")]
-position = Vector2(-441, 136)
+position = Vector2(-460, 150)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1568515109]
 position = Vector2(435, -132)
 process_callback = 0
 
-[node name="CharacterBody2D2" parent="." unique_id=956660731 instance=ExtResource("4_chng0")]
-position = Vector2(339, 214)
+[node name="CharacterBody2D2" parent="." unique_id=956660731 node_paths=PackedStringArray("player") instance=ExtResource("4_chng0")]
+position = Vector2(444, 199)
+rotation = 0.10630054
+player = NodePath("../CharacterBody2D")
+
+[node name="Area2D" parent="." unique_id=22409457 instance=ExtResource("5_hklh5")]
+position = Vector2(-119, 236)
