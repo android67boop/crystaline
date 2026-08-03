@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://citl85e4g2kqf"]
+
+[ext_resource type="Texture2D" uid="uid://bl61affuefebp" path="res://assests/assests/fonts/Untitled - August 04, 2026 at 09.25.23.png" id="1_swcir"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xasec"]
+radius = 25.0
+height = 52.0
+
+[node name="Area2D" type="Area2D" unique_id=1320658469]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1102928958]
+scale = Vector2(0.07539237, 0.07374301)
+texture = ExtResource("1_swcir")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=894241140]
+shape = SubResource("CapsuleShape2D_xasec")
