@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bex3ir47kffn5"]
+
+[ext_resource type="Script" uid="uid://bvkh1dixuo4b2" path="res://scripts/bullet.gd" id="1_v7oki"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rtl8c"]
+radius = 93.0
+height = 186.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1795334349]
+script = ExtResource("1_v7oki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=165749640]
+shape = SubResource("CapsuleShape2D_rtl8c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1601966243]

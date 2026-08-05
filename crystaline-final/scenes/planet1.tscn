@@ -42,4 +42,4 @@ player = NodePath("../CharacterBody2D")
 position = Vector2(-119, 236)
 
 [node name="Area2D2" parent="." unique_id=1320658469 instance=ExtResource("6_76gy3")]
-position = Vector2(-387, 194)
+position = Vector2(-394, 200)
