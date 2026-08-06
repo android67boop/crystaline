@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://bex3ir47kffn5"]
 
 [ext_resource type="Script" uid="uid://bvkh1dixuo4b2" path="res://scripts/bullet.gd" id="1_v7oki"]
+[ext_resource type="Texture2D" uid="uid://cyytpcski4uyc" path="res://assests/assests/Screenshot_2026-08-07_at_10.36.13_AM-removebg-preview.png" id="2_y25gk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rtl8c"]
-radius = 93.0
-height = 186.0
+radius = 45.0
+height = 164.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1795334349]
 script = ExtResource("1_v7oki")
@@ -13,3 +14,6 @@ script = ExtResource("1_v7oki")
 shape = SubResource("CapsuleShape2D_rtl8c")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1601966243]
+position = Vector2(1.0000019, 1)
+scale = Vector2(0.22081217, 0.21406004)
+texture = ExtResource("2_y25gk")

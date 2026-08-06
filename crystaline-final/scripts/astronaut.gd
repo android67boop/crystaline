@@ -33,3 +33,10 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	pass # Replace with function body.
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("mouse _left"):
+		get_node('Gun').shoot()
+		
+		

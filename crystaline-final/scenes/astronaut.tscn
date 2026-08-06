@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bp140ofaud70g" path="res://scripts/astronaut.gd" id="1_v06w7"]
 [ext_resource type="Texture2D" uid="uid://dw7g1bcttb4dq" path="res://assests/astronaut.png" id="2_dmfei"]
+[ext_resource type="PackedScene" uid="uid://citl85e4g2kqf" path="res://scenes/weapon.tscn" id="3_lk35g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dmfei"]
 radius = 78.0
@@ -33,5 +34,8 @@ shape = SubResource("CapsuleShape2D_lk35g")
 [node name="Area2D2" type="Area2D" parent="." unique_id=780355213]
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1966496744]
+
+[node name="Gun" parent="." unique_id=1320658469 instance=ExtResource("3_lk35g")]
+position = Vector2(66, 49)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

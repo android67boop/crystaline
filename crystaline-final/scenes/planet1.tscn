@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bbe5n6ftfoivy" path="res://scenes/astronaut.tscn" id="2_rghbl"]
 [ext_resource type="PackedScene" uid="uid://cfrwpjvdmfnje" path="res://scenes/alien.tscn" id="4_chng0"]
 [ext_resource type="PackedScene" uid="uid://cb34jtijachaw" path="res://scenes/gem.tscn" id="5_hklh5"]
-[ext_resource type="PackedScene" uid="uid://citl85e4g2kqf" path="res://scenes/weapon.tscn" id="6_76gy3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3mkt7"]
 size = Vector2(1300, 20)
@@ -27,7 +26,7 @@ scale = Vector2(1.1102693, 1)
 texture = ExtResource("2_3mkt7")
 
 [node name="CharacterBody2D" parent="." unique_id=1541800611 instance=ExtResource("2_rghbl")]
-position = Vector2(-460, 150)
+position = Vector2(-462, 144)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1568515109]
 position = Vector2(435, -132)
@@ -40,6 +39,3 @@ player = NodePath("../CharacterBody2D")
 
 [node name="Area2D" parent="." unique_id=22409457 instance=ExtResource("5_hklh5")]
 position = Vector2(-119, 236)
-
-[node name="Area2D2" parent="." unique_id=1320658469 instance=ExtResource("6_76gy3")]
-position = Vector2(-394, 200)
