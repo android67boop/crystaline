@@ -4,14 +4,14 @@
 [ext_resource type="Script" uid="uid://ddeglkr1h1ak8" path="res://scripts/weapon.gd" id="1_uxn4k"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xasec"]
-radius = 25.0
-height = 52.0
+radius = 21.0
+height = 42.0
 
-[node name="Area2D" type="Area2D" unique_id=1320658469]
+[node name="gun" type="Area2D" unique_id=1320658469]
 script = ExtResource("1_uxn4k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1102928958]
-scale = Vector2(0.07539237, 0.07374301)
+scale = Vector2(0.062780276, 0.0527933)
 texture = ExtResource("1_swcir")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=894241140]

@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+var health = 5
 @export var speed: float = 200.0
 @export var player: Node2D
 
@@ -17,3 +17,13 @@ func _physics_process(delta: float) -> void:
 		
 		
 		move_and_slide()
+
+
+func _enemy_being_hit_by_bullet(body: Node2D) -> void:
+	health -= 1
+	print("hit")
+	
+	if health <= 0: 
+		queue_free()
+	
+	
