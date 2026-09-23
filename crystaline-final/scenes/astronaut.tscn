@@ -8,7 +8,11 @@
 radius = 54.0
 height = 160.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1541800611]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lk35g"]
+radius = 51.0
+height = 154.0
+
+[node name="astronaut" type="CharacterBody2D" unique_id=1541800611 groups=["astronaut"]]
 script = ExtResource("1_v06w7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=798882951]
@@ -20,14 +24,14 @@ position = Vector2(1, 0)
 shape = SubResource("CapsuleShape2D_dmfei")
 debug_color = Color(1, 0.6, 0.69803923, 0.41960785)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=969191569]
-
-[node name="Area2D2" type="Area2D" parent="." unique_id=780355213]
-
 [node name="Gun" parent="." unique_id=1320658469 instance=ExtResource("3_lk35g")]
 position = Vector2(45, 24)
 
 [node name="Marker2D2" type="Marker2D" parent="Gun" unique_id=1966496744]
 position = Vector2(-66, -49)
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[node name="Area2D" type="Area2D" parent="." unique_id=1603556109]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=903878199]
+position = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_lk35g")

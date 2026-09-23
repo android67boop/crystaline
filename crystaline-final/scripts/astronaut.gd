@@ -6,6 +6,7 @@ const SPEED = 130.0
 
 const JUMP_VELOCITY = -500.0
 
+var health = 1
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -24,16 +25,16 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
+	move_and_slide()	
+	
 		
-		
-		
-	move_and_slide()
-   
+func take_damage(damage):
+	health -= damage
 
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
-
-
+	if health <= 0:
+		die()
 		
-		
+func die():
+	get_tree().reload_current_scene()
+			
+			

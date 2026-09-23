@@ -3,20 +3,21 @@
 [ext_resource type="Script" uid="uid://bvkh1dixuo4b2" path="res://scripts/bullet.gd" id="1_v7oki"]
 [ext_resource type="Texture2D" uid="uid://cyytpcski4uyc" path="res://assests/assests/Screenshot_2026-08-07_at_10.36.13_AM-removebg-preview.png" id="2_y25gk"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rtl8c"]
-radius = 1.0
-height = 4.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkf8s"]
+radius = 3.0
+height = 16.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1795334349]
+[node name="Area2D" type="Area2D" unique_id=2086689495 groups=["bullet"]]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("1_v7oki")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1601966243]
-z_index = 1
-position = Vector2(-9.536743e-07, 0.99999905)
-scale = Vector2(0.024111673, 0.021721955)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=77095557]
+position = Vector2(-1.1920929e-07, 0)
+scale = Vector2(0.012690338, 0.023696687)
 texture = ExtResource("2_y25gk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=165749640]
-shape = SubResource("CapsuleShape2D_rtl8c")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=804976510]
+shape = SubResource("CapsuleShape2D_mkf8s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

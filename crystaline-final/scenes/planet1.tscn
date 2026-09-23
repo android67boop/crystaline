@@ -4,11 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://d2ph5v8hfj3x0" path="res://assests/Screenshot 2026-07-24 at 10.24.15 AM.png" id="2_3mkt7"]
 [ext_resource type="PackedScene" uid="uid://bbe5n6ftfoivy" path="res://scenes/astronaut.tscn" id="2_rghbl"]
 [ext_resource type="PackedScene" uid="uid://cfrwpjvdmfnje" path="res://scenes/alien.tscn" id="4_chng0"]
+[ext_resource type="PackedScene" uid="uid://cb34jtijachaw" path="res://scenes/gem.tscn" id="5_hklh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_chng0"]
 size = Vector2(1192.0532, 25)
 
-[node name="Node2D" type="Node2D" unique_id=414470956 groups=["alien"]]
+[node name="Node2D" type="Node2D" unique_id=414470956]
 script = ExtResource("1_c3u4w")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1383990834]
@@ -32,6 +33,10 @@ position = Vector2(655.25, 658)
 scale = Vector2(1.1102693, 1)
 shape = SubResource("RectangleShape2D_chng0")
 
-[node name="CharacterBody2D2" parent="." unique_id=956660731 node_paths=PackedStringArray("player") instance=ExtResource("4_chng0")]
+[node name="enemy" parent="." unique_id=956660731 node_paths=PackedStringArray("player") instance=ExtResource("4_chng0")]
 position = Vector2(962, 585)
 player = NodePath("../CharacterBody2D")
+
+[node name="Area2D" parent="." unique_id=22409457 instance=ExtResource("5_hklh5")]
+visible = false
+position = Vector2(948, 592)

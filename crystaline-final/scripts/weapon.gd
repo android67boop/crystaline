@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("alien"):
-		player.increase_score(body.take_damage(damage), body.value)
+		body.take_damage(damage)
 		queue_free()
 
 func shoot() -> void:
@@ -32,6 +32,3 @@ func shoot() -> void:
 	new_bullet.target_position = (get_global_mouse_position() - marker_2d.global_position).normalized()
 	
 	get_tree().current_scene.add_child(new_bullet)
-	
-	
-	

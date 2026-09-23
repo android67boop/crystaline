@@ -1,14 +1,10 @@
-extends Node2D
+extends Node
 
-@onready var alien = $enemy
-@onready var gem = $Area2D
+var health: int = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if Global.health == 0:
-		alien.hide()
-		gem.show()
-		
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
