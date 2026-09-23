@@ -25,7 +25,7 @@ shape = SubResource("CapsuleShape2D_dmfei")
 debug_color = Color(1, 0.6, 0.69803923, 0.41960785)
 
 [node name="Gun" parent="." unique_id=1320658469 instance=ExtResource("3_lk35g")]
-position = Vector2(45, 24)
+position = Vector2(44, 26)
 
 [node name="Marker2D2" type="Marker2D" parent="Gun" unique_id=1966496744]
 position = Vector2(-66, -49)
@@ -33,5 +33,5 @@ position = Vector2(-66, -49)
 [node name="Area2D" type="Area2D" parent="." unique_id=1603556109]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=903878199]
-position = Vector2(1, 1)
+position = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_lk35g")

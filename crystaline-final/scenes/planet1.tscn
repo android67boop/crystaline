@@ -19,7 +19,7 @@ scale = Vector2(1.1102693, 1)
 texture = ExtResource("2_3mkt7")
 
 [node name="CharacterBody2D" parent="." unique_id=1541800611 instance=ExtResource("2_rghbl")]
-position = Vector2(99, 570)
+position = Vector2(123, 573)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1568515109]
 position = Vector2(581, 421)
@@ -29,12 +29,12 @@ process_callback = 0
 [node name="CharacterBody2D3" type="CharacterBody2D" parent="." unique_id=385812798]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D3" unique_id=1583070957]
-position = Vector2(655.25, 658)
+position = Vector2(666.00006, 662)
 scale = Vector2(1.1102693, 1)
 shape = SubResource("RectangleShape2D_chng0")
 
 [node name="enemy" parent="." unique_id=956660731 node_paths=PackedStringArray("player") instance=ExtResource("4_chng0")]
-position = Vector2(962, 585)
+position = Vector2(1186, 577)
 player = NodePath("../CharacterBody2D")
 
 [node name="Area2D" parent="." unique_id=22409457 instance=ExtResource("5_hklh5")]
