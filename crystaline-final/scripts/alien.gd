@@ -48,6 +48,15 @@ func take_damage(damage: int) -> void:
 			get_parent().add_child(gem)
 			gem.global_position = global_position
 			
+		hide()
+		set_physics_process(false)
+		await get_tree().create_timer(0.5).timeout
+		
+		health = 5
+		show()
+		set_physics_process(true)
+		
+
 			
 		queue_free()
 		

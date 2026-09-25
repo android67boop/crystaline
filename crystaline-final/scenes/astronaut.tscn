@@ -1,37 +1,39 @@
 [gd_scene format=3 uid="uid://bbe5n6ftfoivy"]
 
+[ext_resource type="Texture2D" uid="uid://b3bnp6my28ows" path="res://assests/assests/astronaut.png" id="1_dmfei"]
 [ext_resource type="Script" uid="uid://bp140ofaud70g" path="res://scripts/astronaut.gd" id="1_v06w7"]
-[ext_resource type="Texture2D" uid="uid://dw7g1bcttb4dq" path="res://assests/astronaut.png" id="2_dmfei"]
 [ext_resource type="PackedScene" uid="uid://citl85e4g2kqf" path="res://scenes/weapon.tscn" id="3_lk35g"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dmfei"]
-radius = 54.0
-height = 160.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a75ng"]
+radius = 45.0
+height = 144.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lk35g"]
-radius = 51.0
-height = 154.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nr1oy"]
+radius = 45.0
+height = 148.0
 
-[node name="astronaut" type="CharacterBody2D" unique_id=1541800611 groups=["astronaut"]]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1359199314 groups=["astronaut"]]
 script = ExtResource("1_v06w7")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=798882951]
-scale = Vector2(0.2241211, 0.20996094)
-texture = ExtResource("2_dmfei")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=805606623]
+position = Vector2(3.8146973e-06, 2)
+scale = Vector2(0.24816895, 0.21105959)
+texture = ExtResource("1_dmfei")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2034949765]
-position = Vector2(1, 0)
-shape = SubResource("CapsuleShape2D_dmfei")
-debug_color = Color(1, 0.6, 0.69803923, 0.41960785)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=253895800 groups=["astronaut"]]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_a75ng")
+debug_color = Color(0.6861149, 0.4450729, 0.6135846, 0.41960785)
 
-[node name="Gun" parent="." unique_id=1320658469 instance=ExtResource("3_lk35g")]
-position = Vector2(44, 26)
+[node name="gun" parent="." unique_id=1320658469 groups=["astronaut"] instance=ExtResource("3_lk35g")]
+position = Vector2(48, 27)
 
-[node name="Marker2D2" type="Marker2D" parent="Gun" unique_id=1966496744]
-position = Vector2(-66, -49)
+[node name="Marker2D2" type="Marker2D" parent="gun" unique_id=1209109930]
+position = Vector2(182, -104)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1603556109]
+[node name="Area2D" type="Area2D" parent="." unique_id=1378398039]
+position = Vector2(119, -93)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=903878199]
-position = Vector2(2, 2)
-shape = SubResource("CapsuleShape2D_lk35g")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2005315650]
+position = Vector2(-119, 93)
+shape = SubResource("CapsuleShape2D_nr1oy")

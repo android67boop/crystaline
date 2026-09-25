@@ -1,22 +1,21 @@
 [gd_scene format=3 uid="uid://cb34jtijachaw"]
 
 [ext_resource type="Script" uid="uid://cyh5rjtrr1k1b" path="res://scripts/gem.gd" id="1_mpwtx"]
-[ext_resource type="Texture2D" uid="uid://b7a08do4kkqeq" path="res://assests/assests/Screenshot_2026-08-26_at_12.17.43_PM-removebg-preview.png" id="2_mpwtx"]
+[ext_resource type="Texture2D" path="res://assests/Screenshot_2026-08-26_at_12.17.43_PM-removebg-preview (2).png" id="2_mpwtx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hgwl1"]
-radius = 27.018513
+radius = 39.45884
 
 [node name="Area2D" type="Area2D" unique_id=22409457]
 script = ExtResource("1_mpwtx")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=265760488]
-position = Vector2(0, -1.5258789e-05)
-scale = Vector2(0.25423726, 0.30357143)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=942659696]
+position = Vector2(-9.536743e-07, -1.9073486e-06)
+scale = Vector2(0.36864406, 0.39062503)
 texture = ExtResource("2_mpwtx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1098655310]
-position = Vector2(0, 1)
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_hgwl1")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
