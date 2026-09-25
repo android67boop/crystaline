@@ -1,10 +1,14 @@
 extends CharacterBody2D
 var health = 5
 var knockback = 0.0
+var spawn_position: Vector2
 @export var knockback_strength: float = 300.0
 @export var speed: float = 200.0
 @export var player: Node2D
 @export var gem_scene: PackedScene
+
+
+
 #func _physics_process(delta: float) -> void:
 	#if player:
 		#var relative_position = (player.global_position.x - global_position.x)
@@ -14,7 +18,8 @@ var knockback = 0.0
 			#direction = 1
 		
 		#velocity.x = direction * speed
-		
+func _ready() -> void:
+	spawn_position = global_position	
 		
 func _physics_process(delta: float) -> void:
 	if knockback != 0:
@@ -34,6 +39,9 @@ func _physics_process(delta: float) -> void:
 
 
 func take_damage(damage: int) -> void:
+	if not visible:
+		return
+		
 	health -= damage
 	print("hit")
 	
@@ -47,15 +55,20 @@ func take_damage(damage: int) -> void:
 			var gem = gem_scene.instantiate()
 			get_parent().add_child(gem)
 			gem.global_position = global_position
-			print("Gem spawned at: ", gem.global_position)
-			print("GEM CREATED")
-			print(gem)
-			print(gem.global_position)
-		queue_free()
+		hide()
+		set_physics_process(false)
 		
+		await get_tree().create_timer(2).timeout
 		
-
-		
+		health = 5
+		knockback = 0.0
+		global_position = spawn_position
+		show()
+		set_physics_process(true)
+			
+			
+			
+			
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("bullet"):
 		take_damage(1)
