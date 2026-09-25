@@ -47,23 +47,18 @@ func take_damage(damage: int) -> void:
 			var gem = gem_scene.instantiate()
 			get_parent().add_child(gem)
 			gem.global_position = global_position
-			
-		hide()
-		set_physics_process(false)
-		await get_tree().create_timer(0.5).timeout
-		
-		health = 5
-		show()
-		set_physics_process(true)
-		
-
-			
+			print("Gem spawned at: ", gem.global_position)
+			print("GEM CREATED")
+			print(gem)
+			print(gem.global_position)
 		queue_free()
 		
 		
+
+		
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("bullet"):
-		body.take_damage(1)
+		take_damage(1)
 		
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

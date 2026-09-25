@@ -1,16 +1,29 @@
 extends Node2D
 
-@onready var alien = $enemy
-@onready var gem = $Area2D
+var score = 0
 
-# Called when the node enters the scene tree for the first time.
+@onready var score_label = $Label
+@onready var health_label = $Label2
+@onready var alien = $alien
+
 func _ready() -> void:
-	if Global.health == 0:
-		alien.hide()
-		gem.show()
-		
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	update_score()
+	update_alien_health()
+	
+	
+func _process(delta:float) -> void:
+	update_alien_health()
+	
+func add_score() -> void:
+	score += 1
+	update_score()
+	
+func update_score() -> void:
+	score_label.text = "Gem Count:" + str(score)
+	
+func update_alien_health() -> void:
+	if is_instance_valid(alien):
+		health_label.text = "Alien Health" + str(alien.health)
+	else:
+		health_label.text = "Alien Health: 0"
+	
