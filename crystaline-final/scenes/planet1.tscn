@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cfw7f1qxdkq37"]
 
 [ext_resource type="Script" uid="uid://bw7ojs80hht16" path="res://scripts/planet_1.gd" id="1_c3u4w"]
-[ext_resource type="Texture2D" path="res://assests/planet-1 final.png" id="2_chng0"]
+[ext_resource type="Texture2D" uid="uid://dj222py8cgisp" path="res://assests/planet-1 final.png" id="2_chng0"]
 [ext_resource type="PackedScene" uid="uid://bbe5n6ftfoivy" path="res://scenes/astronaut.tscn" id="2_rghbl"]
 [ext_resource type="PackedScene" uid="uid://cfrwpjvdmfnje" path="res://scenes/alien.tscn" id="4_chng0"]
 
