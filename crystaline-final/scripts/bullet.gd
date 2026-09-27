@@ -2,7 +2,7 @@ extends Area2D
 
 const BULLET_DAMAGE = 1 
 
-var direction: Vector2 = Vector2.ZERO
+var target_position : Vector2 = Vector2.ZERO
 var despawn_time := 5.0
 var damage: int = BULLET_DAMAGE
 
@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	#move the bullet in the direction it was fired
-	global_position += direction * speed * delta
+	global_position += target_position * speed * delta
 
 
 func _on_body_entered(body: Node2D) -> void:

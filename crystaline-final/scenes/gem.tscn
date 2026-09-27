@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cb34jtijachaw"]
 
 [ext_resource type="Script" uid="uid://cyh5rjtrr1k1b" path="res://scripts/gem.gd" id="1_mpwtx"]
-[ext_resource type="Texture2D" uid="uid://tf3fhibgql8l" path="res://assests/Screenshot_2026-08-26_at_12.17.43_PM-removebg-preview (2).png" id="2_mpwtx"]
+[ext_resource type="Texture2D" uid="uid://b7a08do4kkqeq" path="res://assests/assests/gem.png" id="2_mpwtx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hgwl1"]
 radius = 20.0

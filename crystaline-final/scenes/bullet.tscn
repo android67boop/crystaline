@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bex3ir47kffn5"]
 
 [ext_resource type="Script" uid="uid://bvkh1dixuo4b2" path="res://scripts/bullet.gd" id="1_v7oki"]
-[ext_resource type="Texture2D" uid="uid://cyytpcski4uyc" path="res://assests/assests/Screenshot_2026-08-07_at_10.36.13_AM-removebg-preview.png" id="2_y25gk"]
+[ext_resource type="Texture2D" uid="uid://cyytpcski4uyc" path="res://assests/assests/bullet.png" id="2_y25gk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y25gk"]
 radius = 2.0
