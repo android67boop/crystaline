@@ -1,9 +1,12 @@
 extends Area2D
 
-@export var speed : int = 800
-var target_position: Vector2 = Vector2.ZERO
+const BULLET_DAMAGE = 1 
+
+var direction: Vector2 = Vector2.ZERO
 var despawn_time := 5.0
-var damage: int = 1
+var damage: int = BULLET_DAMAGE
+
+@export var speed : int = 800
 
 func _ready() -> void: 
 	body_entered.connect(_on_body_entered)
@@ -11,19 +14,18 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	global_position += target_position * speed * delta
-	
+	#move the bullet in the direction it was fired
+	global_position += direction * speed * delta
+
+
 func _on_body_entered(body: Node2D) -> void:
-	print("COLLISION WITH: ", body.name)
-	print("IS ALIEN: ", body.is_in_group("alien"))
+	#only damage objects in the alien group and then remove the bullet
 	if body.is_in_group("alien"):
-		print("im in alien")
 		body.take_damage(damage)
 		queue_free()
-		
 
 
 func despawn() -> void:
+	#remove the bullet after 5 seconds so unused bullets do not stay in the game
 	await get_tree().create_timer(despawn_time).timeout
-	
 	queue_free()
